@@ -1,5 +1,5 @@
 # 博客园自定义主题
-说明：效果查看[那些陌生的C++关键字](https://www.cnblogs.com/linuxAndMcu/p/11189574.html)。
+说明：效果可以查看[那些陌生的C++关键字](https://www.cnblogs.com/linuxAndMcu/p/11189574.html)。
 
 ## 使用方法
 进入博客园后台管理，修改页面定制CSS代码、博客园侧边栏公告、页首Html代码、页尾Html代码。
