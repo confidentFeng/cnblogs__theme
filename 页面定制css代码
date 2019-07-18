@@ -1,0 +1,1323 @@
+/* 博客主体部分 begin */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #e0ebe8;
+    color: #404244;
+    font-family: Arial,Helvetica,sans-serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue'; 
+    font-size: 16px;
+}
+
+/* 按钮等控件鼠标样式设置为手指箭头 */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+/* 图像 */
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+*, :before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+li {
+    list-style: none outside none;
+}
+
+a:link, a:visited {
+    color: #327a9c;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #f76160;
+    text-decoration: none;
+}
+
+#main {
+    overflow: hidden;
+    padding: 20px 24px 10px 24px;
+}
+
+/* 主内容栏 */
+#mainContent {
+    float: right;
+    margin-left: -210px;
+    min-height: 200px;
+    text-overflow: ellipsis;
+    width: 100%;
+    word-break: break-all;
+}
+
+/* 右边内容部分 */
+#mainContent .forFlow {
+    margin-left: 216px;
+    width: auto;
+}
+
+/* 每天的文章 */
+.day {
+    background: #ffffff;
+    border-radius: 7px;
+    min-height: 10px;
+    margin-bottom: 14px;
+    padding: 8px 15px 8px;
+}
+
+/* 文章摘要 */
+.postCon {
+    clear: both;
+    padding: 10px 0 8px;
+}
+
+/* 文章右下角 */
+.postDesc {
+    clear: both;
+    float: right;
+    text-align: right;
+}
+
+/* --底部 下一页 begin-- */
+.topicListFooter {
+    text-align: left;
+}
+
+#nav_next_page a {
+    background: #217d68;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 11px;
+    display: inline-block;
+}
+/* --底部 下一页 end-- */
+
+/* --页脚版权部分 begin-- */
+#footer {
+    background: #c5ded7;
+    text-align: center;
+    color: #217d68;
+    padding: 2em 0;
+    margin-top: 12px;
+}
+/* --页脚版权部分 end-- */
+/* 博客主体部分 end */
+
+
+/* 侧边栏 begin */
+/* 公告 */
+.newsItem {
+    background: #fafcfd; /* 灰白色 */
+    border-radius: 7px;
+    margin-bottom: 15px;
+    padding: 0.4em;
+}
+
+/* 搜索 */
+.div_my_zzk
+{
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+}
+
+/* 搜索输入框 */
+.input_my_zzk {
+    height: 30px;
+    border: 1px solid #319c84;
+    background: #eee;
+    font-size: 16px;
+    padding: 0 5px;
+    -webkit-appearance: none;
+    flex: 1;
+}
+
+/* 搜索栏焦点 */
+.input_my_zzk:focus {
+    outline: none;
+}
+
+/* 搜索按钮 */
+input.btn_my_zzk {
+    width: 70px;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    background: #319c84;
+    border-radius: 3px;
+}
+
+/* 侧边栏每个块-名称部分 */
+.catListTitle {
+    background: #319c84;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    color: #ffffff;
+    font-size: 1.0em;
+    line-height: 1.5em;
+    padding: 3px 4px 0px;
+    text-indent: 0.5em;
+}
+
+/* 整个侧边栏（包括公告、随笔分类等） */
+@media (min-width: 768px) {
+    #sideBar {
+        float: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 200px;
+    }
+}
+
+/* 侧边栏每个块 */
+.sidebar-block {
+    background: #fafcfd;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+/* 侧边栏每个“列表块”中的每一行 */
+#blog-sidecolumn ul li{
+    border-bottom: 1px solid #dadfe1;
+    border-top: 1px solid #ffffff;
+    overflow: hidden;
+    padding: 4px 0.5em;
+}
+
+/* 随笔分类中的每一行 */
+#sideBarMain ul {
+    line-height: 1.5;
+}
+
+/* 随笔分类中的每一行中的文字 */
+.catListPostCategory ul li a {
+    font-size: 15px;
+}
+
+#sidebar_postcategory a:visited, #sidebar_postcategory a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+.catListPostCategory ul li a:hover {
+    text-decoration: none;
+}
+
+/* 取消显示一些“侧边栏窗口” */
+#blogCalendar,  /* 日历 */
+#blogTitle, /* 博客标题 */
+#header,
+/*#profile_block,  简介 */ 
+#site_nav_under, /* 站点导航 */
+.itnews, .c_ad_block, .dayTitle, .newsItem .catListTitle, 
+#ad_t2, 
+#commentbox_opt a, 
+.gutter{
+    display: none;
+}
+/* 侧边栏 end */
+
+
+/* 文章主体 begin */
+#topics {
+    background: #fafafa;
+    border-radius: 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    padding: 10px 2px 10px 2px;
+}
+
+/* 文章列表中的文章标题 */
+.day .postTitle {
+    border-bottom: 1px solid #4ab19a;
+    line-height: 0.6em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.4em;
+}
+
+/* 点开文章后的文章标题 begin */
+#topics .postTitle {
+    border-bottom: 1px solid #4ab19a;
+    line-height: 1em;
+    padding-left: 30px;
+    padding-top: 3px;
+    padding-bottom: 10px;
+    font-size: 1.6em;
+}
+
+.postTitle a:link, .postTitle a:visited {
+    color: #3e9c87;
+    transition: all 0.4s linear 0s;
+}
+
+.postTitle a:hover, .postTitle a:active {
+    color: #f76160;
+    margin-left: 10px;
+}
+/* 点开文章后的文章标题 end */
+
+.postBody {
+    border-bottom: 1px solid #cccccc;
+    padding-top: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+#topics .postDesc {
+    line-height: 2.5em;
+    color: #666666;
+    margin-top: 5px;
+    padding-right: 5px;
+    width: 100%;
+}
+
+#author_profile_detail a:link, #post_next_prev a:link {
+    text-decoration: none;
+}
+
+/* 文章主体 end */
+
+
+/* 点进某个随笔分类中 begin */
+.entrylist {
+    background: none repeat scroll 0 0 #ffffff;
+    border-radius: 7px;
+    box-shadow: 1px 1px 2px #a7a8ad;
+    margin: 0 0 15px;
+    min-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    padding: 15px 20px 12px;
+}
+
+/* 随笔分类大标题 */
+.entrylistTitle, .PostListTitle {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 3px;
+    font-size: 20px;
+}
+
+.entrylistDescription {
+    color: #666666;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: right;
+}
+
+.entrylistItem {
+    margin-bottom: 20px;
+    min-height: 20px;
+}
+
+.entrylistPosttitle {
+    border-bottom: 1px solid #cccccc;
+    font-size: 110%;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+a.entrylistItemTitle {
+    color: #3e9c87;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+a.entrylistItemTitle:hover {
+    color: #f76160;
+}
+
+.entrylistPostSummary {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.entrylistItemPostDesc {
+    color: #666666;
+    text-align: right;
+}
+
+.entrylistItemPostDesc a:link, .entrylistItemPostDesc a:visited, .entrylistItemPostDesc a:active {
+    color: #666666;
+}
+
+.entrylistItemPostDesc a:hover {
+    color: #f76160;
+}
+/* 点进某个随笔分类中 end */
+
+
+/* 博客评论区域 begin */
+div.commentform textarea.comment_textarea {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .16);
+    font-size: 15px;
+    padding: 9px 13px;
+    border-radius: 4px;
+}
+
+div.commentform textarea.comment_textarea:focus {
+    border: 1px solid rgba(0, 128, 255, .5);
+}
+
+.feedback_area_title {
+    line-height: 35px;
+    margin: 1px 0 6px;
+    font-size: 16px;
+    padding-left: 8px;
+}
+
+.feedbackListSubtitle {
+    color: #666666;
+}
+
+.feedbackListSubtitle a:hover {
+    color: #f76160;
+    text-decoration: none;
+}
+
+.feedbackManage {
+    float: right;
+    text-align: right;
+    width: 200px;
+}
+
+.feedbackCon {
+    background-size: 22px 22px;
+    background-repeat: no-repeat no-repeat;
+    background-position: 4px 4px;
+    line-height: 1.5;
+    min-height: 35px;
+}
+
+#divRefreshComments {
+    font-size: 9pt;
+    margin-right: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.comment_btn {
+    background: #319c84;
+    border: none;
+    color: #fff;
+    font-size: inherit;
+    border-radius: 5px;
+}
+/* 博客评论区域 end */
+
+
+/* 其他 begin */
+@media (max-width: 767px) {
+    .newsItem {
+        display: none;
+    }
+
+    #mainContent .forFlow {
+        margin-left: 0;
+    }
+
+    #main {
+        margin-top: 10px;
+    }
+
+    .day {
+        margin-bottom: 8px;
+    }
+}
+
+#AjaxHolder_PostComment_divCommnentArea {
+    padding: 10px;
+}
+
+#AjaxHolder_PostComment_divCommnentArea td {
+    padding: 5px 0;
+}
+
+
+.postDesc a:link, .postDesc a:visited, .postDesc a:active {
+    color: #848484;
+}
+
+.postDesc a:hover {
+    color: #f76160;
+}
+
+.commenttb {
+    width: 320px;
+}
+
+.pager {
+    color: #373834;
+    font-size: 15px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.pager a {
+    color: #fff;
+    border: none;
+    background-color: #217d68;
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+.PostList {
+    border-bottom: 1px solid #cccccc;
+    clear: both;
+    margin-bottom: 5px;
+    min-height: 1.5em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+}
+
+.postTitl2 {
+    float: left;
+}
+
+.postDesc2 {
+    color: #666666;
+    float: right;
+}
+
+.postText2 {
+    clear: both;
+    color: #666666;
+}
+
+.tdSentMessage {
+    text-align: right;
+}
+
+.errorMessage {
+    float: left;
+    width: 300px;
+}
+
+#Profile1_panelAdd td {
+    padding: 10px 0px;
+}
+
+.divPhoto {
+    border: 1px solid #cccccc;
+    margin-right: 10px;
+    padding: 2px;
+}
+
+.thumbDescription {
+    color: #666666;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: right;
+}
+
+.personInfo {
+    margin-bottom: 20px;
+}
+
+.pages {
+    text-align: right;
+}
+
+.postBody h2 {
+    font-size: 150%;
+    font-weight: bold;
+    margin: 15px auto 2px;
+}
+
+.postBody a:link, .postBody a:visited, .postBody a:active {
+    text-decoration: underline;
+}
+
+.postCon a:link, .postCon a:visited, .postCon a:active {
+    text-decoration: underline;
+}
+
+.postBody ul, .postCon ul {
+    margin-left: 2em;
+}
+
+.postBody li, .postCon li {
+    font-size:16px;
+    margin-bottom:12px;
+}
+
+.postBody p, .postCon p {
+    font-size: 16px;
+}
+
+#cnblogs_post_body ol, #cnblogs_post_body ul {
+    margin-left: 30px;
+}
+
+::selection {
+    background: #409481;
+    color: #fff;
+}
+
+#information {
+    width: 70%;
+    margin: auto;
+    top: 300px;
+    padding: 40px 0;
+    font-size: 16px;
+    background: rgba(230, 244, 249, .8);
+    -webkit-animation: show-description 1s ease-out;
+}
+
+#information, #site-header {
+    z-index: 1;
+    text-align: center;
+}
+
+.c_b_p_desc_readmore {
+    color: #915F5E;
+    text-decoration: none;
+}
+
+.c_b_p_desc a:visited, .c_b_p_desc a:link {
+    color: #217d68;
+}
+/* 其他 end */
+
+/* 淡入动画 begin */
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.fade-area {
+    -webkit-animation: fadeIn .5s ease-in-out;
+    -moz-transition: fadeIn .5s ease-in-out;
+    -o-transition: fadeIn .5s ease-in-out;
+    transition: fadeIn .5s ease-in-out;
+}
+/* 淡入动画 end */
+
+/* 一：begin */
+section {
+    display: block;
+}
+
+#top {
+    padding-top: 0;
+    overflow: hidden;
+    background: #e0ebe8;
+}
+
+@media (min-width: 992px) {
+    #top {
+        /* padding-top: 130px; */
+    }
+}
+
+header {
+    padding: 1em 0;
+    background: #e0ebe8;
+}
+
+header.nav-top {
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 992px) {
+    header.nav-top {
+        opacity: 0;
+        /* position: fixed; */
+        -webkit-transform: translate3d(0, -130px, 0);
+        -webkit-transition: .5s;
+        transition: .5s;
+        top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    header.headroom--unpinned {
+        top: -200px;
+    }
+}
+
+header.nav-fixed {
+    opacity: 1;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+@media (min-width: 992px) {
+    header.nav-fixed {
+        -webkit-box-shadow: 0 1px 1px rgba(6, 8, 8, .1);
+        box-shadow: 0 1px 1px rgba(6, 8, 8, .1);
+        opacity: .97;
+        -webkit-transition: all .8s;
+        transition: all .8s;
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        overflow: hidden;
+        -webkit-transition-timing-function: ease-in-out;
+        -webkit-transform: translate3d(0, 0, 0);
+        background: #fff;
+    }
+}
+
+header.nav-root {
+    background: inherit;
+}
+
+@media (min-width: 992px) {
+    header.nav-root {
+        background: #E0EBE8;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition: all .8s;
+        transition: all .8s
+    }
+}
+
+.transistion {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (min-width: 1140px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+.container {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row:before, .row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.col-xs-4, .col-xs-8, .col-md-4, .col-md-8, .col-md-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-xs-4, .col-xs-8 {
+    float: left;
+}
+
+.col-xs-4 {
+    width: 33.33333333%;
+}
+
+.col-xs-8 {
+    width: 66.66666667%;
+}
+
+@media (min-width: 992px) {
+    .col-md-4, .col-md-8 {
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-12 {
+        width: 100%;
+    }
+}
+
+#header-logo {
+    -webkit-animation: fadeIn .3s ease-in-out;
+    -moz-transition: fadeIn .3s ease-in-out;
+    -o-transition: fadeIn .3s ease-in-out;
+    transition: fadeIn .3s ease-in-out;
+    border-radius: 60px;
+    overflow: hidden;
+    width: 72px;
+    height: 72px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.image-text {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-indent: -9999px;
+}
+
+#header-logo span {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .col-md-8 {
+        width: 66.66666667%;
+    }
+}
+
+nav {
+    display: block;
+}
+
+header .nav-list {
+    padding-top: 1.5em;
+    padding-left: 0;
+    position: relative;
+    float: right;
+}
+
+.nav-list li {
+    display: block;
+    float: left;
+}
+
+.nav-list li:first-child a {
+    /* margin-left: 0; */
+}
+
+.nav-list li a:hover {
+    color: #3e9c87;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #45b29a;
+    font-weight: 400;
+    margin: 0 0 0 1.5em;
+    font-size: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+    .nav-list li a {
+        font-size: 120%;
+        margin: 0 0 0 2em;
+    }
+}
+
+.fa {
+    margin-right: 0.4em;
+}
+/* 一：end */
+
+/* 二：begin */
+#title-area {
+    padding: 1em 0;
+}
+
+@media (min-width: 992px) {
+    #title-area {
+        padding: 2.6em 0 3em;
+    }
+}
+
+.llfc-blog {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+h2 figure {
+    max-width: 240px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 990;
+}
+
+@media (min-width: 992px) {
+    h2 figure {
+        max-width: 350px;
+    }
+}
+
+h2 figure img {
+    width: 100%;
+    display: inline-block;
+}
+
+#title {
+    padding: .5em 0 0;
+    position: relative;
+}
+
+#title .container {
+    position: relative;
+}
+
+#title .cloud {
+    position: absolute;
+    background: url(//images.cnblogs.com/cnblogs_com/hellovenus/610587/o_cloud.png) top left no-repeat;
+    width: 150px;
+    height: 45px;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index: 980;
+}
+
+#title .left-cloud {
+    left: -6em;
+    bottom: 2em;
+}
+
+@media (min-width: 992px) {
+    #title .left-cloud {
+        left: 2em;
+        bottom: 3em;
+    }
+}
+
+#title .right-cloud {
+    right: -5em;
+    top: 0;
+}
+
+@media (min-width: 992px) {
+    #title .right-cloud {
+        right: 2em;
+        top: 6em;
+    }
+}
+/* 二：end */
+
+/* 三：begin */
+#homepic {
+    margin: 0 auto;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+#homepic img {
+    width: 100%;
+    max-width: 800px !important;
+}
+
+/* 三：end */
+
+#green_channel a {
+    padding: 4px 5px;
+    border-radius: 5px;
+}
+
+
+/* 博文内容 begin */
+/* h1标题 */
+#cnblogs_post_body h1 {
+    font-size: 32px;
+    margin-top: 26px;
+    padding: 2px 10px;
+    margin-bottom: 20px;
+    border-left: 9px green solid;
+}
+
+/* h2标题 */
+#cnblogs_post_body h2 {
+    font-size: 28px;
+    margin-top: 23px;
+    padding: 2px 10px;
+    margin-bottom: 17px;
+    border-left: 7px green solid;
+}
+
+/* h3标题 */
+#cnblogs_post_body h3 {
+    font-size: 23px;
+    margin-top: 20px;
+    padding: 2px 10px;
+    border-left: 5px green solid;
+}
+
+/* h4标题，用作信息提示 */
+#cnblogs_post_body h4 {
+    background: #e7f2fa;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333333;
+    border: none;
+    padding: 32px 10px 10px;
+    margin-bottom: 10px;
+}
+
+#cnblogs_post_body h4:before
+{
+    content:'\f05a  提示';
+    font-family: 'FontAwesome';
+    background:#00a0d2;
+    color:white;
+    position:absolute;
+    left:0;
+    top:0;
+    right: 0;
+    clear:both;
+    padding: 1px 7px;
+}
+
+/* h5标题，用作警告 */
+#cnblogs_post_body h5 {
+    background: #fffae5;
+    font-size: 14px;
+    font-weight: normal;
+    color: #333333;
+    border: none;
+    padding: 32px 10px 10px;
+    margin-bottom: 10px;
+}
+
+#cnblogs_post_body h5:before
+{
+    content:'\f071  警告';
+    font-family: 'FontAwesome';
+    background:#ffcc00;
+    color:white;
+    position:absolute;
+    left:0;
+    top:0;
+    right: 0;
+    clear:both;
+    padding: 1px 7px;
+}
+
+/* h6标题，用作错误 */
+#cnblogs_post_body h6 {
+    background: #ffe9eb;
+    font-size: 14px;
+    font-weight: normal;
+    color: #333333;
+    border: none;
+    padding: 32px 10px 10px;
+    margin-bottom: 10px;
+}
+
+#cnblogs_post_body h6:before
+{
+    content:'\f06a  错误';
+    font-family: 'FontAwesome';
+    background:#ff4455;
+    color:white;
+    position:absolute;
+    left:0;
+    top:0;
+    right: 0;
+    clear:both;
+    padding: 1px 7px;
+}
+
+/* 图片 */
+#cnblogs_post_body img {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .7);
+}
+/* 段落 */
+#cnblogs_post_body p {
+    line-height: 1.4;
+    font-size: 16px;
+    margin-top: 10px;
+}
+/* 博客内容格式美化end */
+
+.syntaxhighlighter table td.code .container
+{
+    padding:13px !important;
+}
+.syntaxhighlighter,.syntaxhighlighter .line.alt2,.syntaxhighlighter .line.alt1
+{
+    background-color: #e0ebe8 !important;
+}
+.syntaxhighlighter .keyword
+{
+    color:#a71d5d !important;
+}
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a
+{
+    color:#969896 !important;
+}
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a
+{
+    color:#a71d5d !important;
+    font-weight:normal !important;
+}
+.syntaxhighlighter .preprocessor
+{
+    color:#183691 !important;
+}
+.cnblogs_code span
+{
+    padding:0 !important;
+    font-size: 118% !important;
+    color: #ca0a62!important;
+    font-family:Consolas, "Liberation Mono", Menlo, Courier, monospace!important;
+}
+.blog_comment_body img
+{
+    vertical-align:bottom;
+}
+
+
+/* 评论区域 begin */
+#blog-comments-placeholder
+{
+    background: #ffffff;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    padding: 0px 15px 0px 15px;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.feedbackItem
+{
+    padding-bottom: 7px;
+}
+
+/* 评论头像 */
+.comment_avatar
+{
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);
+    float: left;
+}
+
+.feedbackListSubtitle {
+    border-top: dashed 1px #ddd;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 1em !important;
+}
+
+/* 评论内容左边的箭头 */
+.displayarrow {
+    content: '';
+    display: inline-block;
+    border-top: 7px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #e0ebe7;
+    position: absolute;
+    top: 10px;
+    margin-left: 8px;
+}
+
+/* 评论内容 */
+.blog_comment_body {
+    padding: 6px 10px;
+    line-height: 22px;
+    margin-bottom: 7px;
+    left: 16px;
+    border-radius: 6px;
+    background: #e0ebe7;
+    border: 1px #e0ebe7 solid;
+    margin-right: 15px;
+}
+/* 评论区域 end */
+
+
+/* 块引用 begin */
+#cnblogs_post_body blockquote {
+    background: whitesmoke; /* 背景颜色为烟白色（#F5F5F5） */
+    border: none; /* 隐藏框线*/
+    border-left: 4px solid #319c84; /* 设置左侧框线的宽度和颜色 */
+    padding: 30px 30px 15px 30px; /* 内边距（上、右、下、左） */
+    position: relative; /* 父元素不能使用默认的static，这里选择了relative */
+}
+
+/* :before选择器向选定的元素前插入内容 */
+#cnblogs_post_body blockquote:before{
+    content: '“'; /* 使用content属性来指定要插入的内容 */
+    font-size: 60px;
+    font-weight: bold;
+    color:  #319c84;    
+    /* 该容器相对定位于距离父元素-4px，左0.1em的这个位置 */    
+    position: absolute; /* 生成绝对定位的元素，相对于static定位以外的第一个父元素进行定位 */
+    top: -4px;
+    left: 0.1em;
+}
+/* 块引用 end */
+
+
+/* markdown代码高亮主题 begin */
+/* makedown块代码样式 */
+.cnblogs-markdown .hljs {
+    font-size: 15px !important;
+    font-family: "Source Code Pro","Consolas","Courier New",Courier,monospace!important;
+    background: #e0ebe8!important; /* 背景色 */
+    color: #000; /* 普通代码颜色为黑色 */
+    border: 0!important; /* 框线宽度为0，则相当于隐藏框线*/
+    padding: 13px; /* 内边距都为13px */
+}
+
+/* makedown行间代码样式 */
+.cnblogs-markdown code {
+    font-size: 1em !important;
+    font-family: "Source Code Pro","Consolas","Courier New",Courier,monospace!important;
+    background-color: #f9f2f4 !important;    
+    color: #c7254e;
+    border: none !important;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #000000;
+}
+
+.hljs-symbol, /* 符号 */
+.hljs-attribute {
+  color: #66d9ef; /* 淡蓝色 */
+}
+
+.hljs-bullet,  /* 布尔 */
+.hljs-quote, /* 引用 */
+.hljs-number, /* 数字 */
+.hljs-regexp, /* 正则表达式 */ 
+.hljs-literal, /* 字面量 */
+.hljs-link { /* 链接 */
+  color: #000080; /* 藏青色 */
+}
+
+.hljs-code,
+.hljs-title, /*函数名*/
+.hljs-section,
+.hljs-selector-class {
+  color: #008B8B; /* 深青色 */
+}
+
+.hljs-class .hljs-title { /* 类名称 */
+  color: #EE30A7; /* 紫红色 */
+}
+
+.hljs-params {/* 函数参数 */
+  color: #0055AF; /* 靛蓝色 */    
+}    
+
+.hljs-variable, /* 变量 */
+.hljs-template-variable { /* 临时变量 */
+  color: #FA8072 /* 橙红色 */
+}    
+
+.hljs-string, /* 字符串 */
+.hljs-type, /* 类型 */
+.hljs-built_in, /* 内置，例如string、cout等 */
+.hljs-builtin-name, /* 内置名称 */
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition {
+  color: #a31515; /* 暗红色 */
+}
+
+.hljs-keyword, /*关键字*/
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #808000; /* 淡褐色 */ 
+}
+
+.hljs-meta { /* 头文件、宏定义 */
+  color: #20B2AA; /* 亮海蓝色 */    
+}
+
+.hljs-comment, /* 注释 */
+.hljs-deletion {
+  color: #008000; /* 绿色 */
+}
+/* markdown代码高亮主题 end */
