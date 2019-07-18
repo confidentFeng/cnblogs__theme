@@ -1,0 +1,43 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<section id="top">
+    <header id="home-top" class="nav-top nav-fixed nav-root">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <nav id="top-nav">
+                        <ul class="nav-list transistion">
+                            <li><a href="https://www.cnblogs.com/"><i class='fa fa-smile-o'></i>博客园</a></li>
+                            <li><a href="[1]你的博客园首页网址"><i class='fa fa-home'></i>首页</a></li>
+                            <li><a href="[2]你的博客园管理网址"><i class='fa fa-user'></i>管理</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="fade-area">
+        <div id="title">
+            <div class="container">
+                <div class="transistion cloud left-cloud"></div>
+                <div class="transistion cloud right-cloud"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="title-area" class="transistion">
+                            <h2 class="llfc-blog">
+                                <figure class="transistion">
+                                    <img src="[3]主标题，一张图片">
+                                </figure>
+                            </h2>
+                            <h2 class="blog-subtitle">
+                                <figure class="transistion">
+                                    <img src="[4]副标题，一张图片">
+                                </figure>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
