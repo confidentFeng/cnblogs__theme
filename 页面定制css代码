@@ -1215,7 +1215,6 @@ h2 figure img {
     color:  #319c84;    
     /* 该容器相对定位于距离父元素-4px，左0.1em的这个位置 */    
     position: absolute; /* 生成绝对定位的元素，相对于static定位以外的第一个父元素进行定位 */
-    top: -4px;
     left: 0.1em;
 }
 /* 块引用 end */
